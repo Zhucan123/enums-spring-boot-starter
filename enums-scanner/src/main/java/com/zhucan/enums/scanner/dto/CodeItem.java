@@ -1,0 +1,43 @@
+package com.zhucan.enums.scanner.dto;
+
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.zhucan.enums.scanner.CodeEnum;
+
+/**
+ * @author: zhuCan
+ * @date: 2020/7/9 11:25
+ * @description: 枚举的数据值, 包括数值 code 和 标识名 name, 支持重写
+ */
+public class CodeItem implements CodeEnum {
+
+  /**
+   * code
+   */
+  private Integer code;
+
+  /**
+   * name 标识
+   */
+  private String name;
+
+  public CodeItem(CodeEnum codeEnum) {
+    this.code = codeEnum.code();
+    this.name = codeEnum.value();
+  }
+
+  /**
+   * 重写覆盖 jsonValue注解,
+   *
+   * @return
+   */
+  @Override
+  @JsonValue(value = false)
+  public Integer code() {
+    return code;
+  }
+
+  @Override
+  public String value() {
+    return name;
+  }
+}
