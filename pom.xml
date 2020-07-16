@@ -18,6 +18,7 @@
 
     <modules>
         <module>enums-scanner</module>
+        <module>jpa-conversion</module>
     </modules>
 
 
