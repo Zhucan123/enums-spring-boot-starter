@@ -18,7 +18,7 @@
        <dependency>
              <groupId>io.gitee.zhucan123</groupId>
              <artifactId>spring-boot-starter-enums-scanner</artifactId>
-             <version>1.0.0</version>
+             <version>1.0.0-RELEASE</version>
        </dependency>
 ```
 
