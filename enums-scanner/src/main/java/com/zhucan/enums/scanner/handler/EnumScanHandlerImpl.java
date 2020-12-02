@@ -81,12 +81,10 @@ public class EnumScanHandlerImpl implements EnumScanHandler{
           int defaultEnumCode = clazz.getAnnotation(EnumScan.class).defaultEnumCode();
 
           // 填充数据
-          codeEnums.add(CodeTable.builder()
-              .items(items.stream().map(CodeItem::new).collect(Collectors.toList()))
-              .enumName(clazz.getSimpleName())
-              .classPath(clazz.getName())
-              .defaultItem(items.stream().collect(Collectors.toMap(CodeEnum::code, i -> i, (m, n) -> m)).get(defaultEnumCode))
-              .build());
+          codeEnums.add(new CodeTable(clazz.getSimpleName(),
+                  items.stream().map(CodeItem::new).collect(Collectors.toList()),
+                  items.stream().collect(Collectors.toMap(CodeEnum::code, i -> i, (m, n) -> m)).get(defaultEnumCode),
+                  clazz.getName()));
         }
       } catch (Exception e) {
         e.printStackTrace();

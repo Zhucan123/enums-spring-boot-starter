@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.deser.ContextualDeserializer;
 import com.zhucan.jpa.conversion.CodeEnum;
-import lombok.Data;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
@@ -17,7 +16,6 @@ import java.util.regex.Pattern;
  * @date: 18:05
  * @description: 枚举反序列化
  */
-@Data
 public class JsonEnumDeserializer extends JsonDeserializer<Enum<?>> implements ContextualDeserializer {
 
   /**
@@ -68,5 +66,13 @@ public class JsonEnumDeserializer extends JsonDeserializer<Enum<?>> implements C
   public static boolean isInteger(String str) {
     Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
     return pattern.matcher(str).matches();
+  }
+
+  public Class getClazz() {
+    return clazz;
+  }
+
+  public void setClazz(Class clazz) {
+    this.clazz = clazz;
   }
 }

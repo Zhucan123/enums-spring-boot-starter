@@ -1,10 +1,6 @@
 package com.zhucan.enums.scanner.dto;
 
 import com.zhucan.enums.scanner.CodeEnum;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -13,10 +9,7 @@ import java.util.List;
  * @date: 2020/7/9 11:25
  * @description: 枚举码表缓存的数据结构
  */
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class CodeTable {
 
   /**
@@ -39,4 +32,44 @@ public class CodeTable {
    */
   private String classPath;
 
+
+  public CodeTable(String enumName, List<CodeItem> items, CodeEnum defaultItem, String classPath) {
+    this.enumName = enumName;
+    this.items = items;
+    this.defaultItem = defaultItem;
+    this.classPath = classPath;
+  }
+
+
+  public String getEnumName() {
+    return enumName;
+  }
+
+  public void setEnumName(String enumName) {
+    this.enumName = enumName;
+  }
+
+  public List<CodeItem> getItems() {
+    return items;
+  }
+
+  public void setItems(List<CodeItem> items) {
+    this.items = items;
+  }
+
+  public CodeEnum getDefaultItem() {
+    return defaultItem;
+  }
+
+  public void setDefaultItem(CodeEnum defaultItem) {
+    this.defaultItem = defaultItem;
+  }
+
+  public String getClassPath() {
+    return classPath;
+  }
+
+  public void setClassPath(String classPath) {
+    this.classPath = classPath;
+  }
 }
