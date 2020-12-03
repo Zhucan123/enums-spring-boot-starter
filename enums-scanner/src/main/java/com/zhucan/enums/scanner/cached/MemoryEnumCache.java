@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class MemoryEnumCache implements EnumCache {
 
-  private static Map<String, Object> cache = new ConcurrentHashMap<>();
+  private static Map<String, List<CodeTable>> cache = new ConcurrentHashMap<>();
 
   @Override
   public void write(List<CodeTable> codeEnums) {
@@ -24,6 +24,6 @@ public class MemoryEnumCache implements EnumCache {
 
   @Override
   public List<CodeTable> read() {
-    return (List<CodeTable>) cache.get(EnumConstant.ENUM_CACHE_KEY);
+    return cache.get(EnumConstant.ENUM_CACHE_KEY);
   }
 }
