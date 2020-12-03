@@ -11,16 +11,10 @@
 
     <groupId>io.gitee.zhucan123</groupId>
     <artifactId>spring-boot-starter</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.2-RELEASE</version>
     <packaging>pom</packaging>
 
     <name>starter</name>
-
-    <modules>
-        <module>enums-scanner</module>
-        <module>jpa-conversion</module>
-    </modules>
-
 
     <description>stater project for Spring Boot</description>
 
