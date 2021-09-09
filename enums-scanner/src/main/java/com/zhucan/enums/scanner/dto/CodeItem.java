@@ -25,6 +25,10 @@ public class CodeItem implements CodeEnum {
     this.name = codeEnum.value();
   }
 
+  public CodeItem(){
+
+  }
+
   /**
    * 重写覆盖 jsonValue注解,
    *
@@ -39,5 +43,21 @@ public class CodeItem implements CodeEnum {
   @Override
   public String value() {
     return name;
+  }
+
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 }
