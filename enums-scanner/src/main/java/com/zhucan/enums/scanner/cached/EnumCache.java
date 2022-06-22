@@ -1,7 +1,7 @@
 package com.zhucan.enums.scanner.cached;
 
 
-import com.zhucan.enums.scanner.dto.CodeTable;
+import com.zhucan.enums.scanner.model.CodeTable;
 
 import java.util.List;
 import java.util.Map;

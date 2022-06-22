@@ -1,11 +1,11 @@
 package com.zhucan.enums.scanner.handler;
 
-import com.zhucan.enums.scanner.CodeEnum;
+import com.zhucan.enums.core.enums.CodeEnum;
 import com.zhucan.enums.scanner.annotation.EnumScan;
 import com.zhucan.enums.scanner.cached.EnumCache;
 import com.zhucan.enums.scanner.context.ResourcesScanner;
-import com.zhucan.enums.scanner.dto.CodeItem;
-import com.zhucan.enums.scanner.dto.CodeTable;
+import com.zhucan.enums.scanner.model.CodeItem;
+import com.zhucan.enums.scanner.model.CodeTable;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,7 +1,7 @@
 package com.zhucan.enums.conversion.converter;
 
 
-import com.zhucan.enums.conversion.CodeEnum;
+import com.zhucan.enums.core.enums.CodeEnum;
 
 import javax.persistence.AttributeConverter;
 import java.lang.reflect.ParameterizedType;
@@ -21,24 +21,24 @@ public abstract class AbstractEnumConverter<S extends CodeEnum, M extends Number
     /**
      * 枚举类转为 code值
      *
-     * @param attributeStatus
-     * @return
+     * @param attribute 实体属性值
+     * @return 数据库对象
      */
     @Override
-    public M convertToDatabaseColumn(S attributeStatus) {
+    public M convertToDatabaseColumn(S attribute) {
         //做空判断,因为数据库枚举类型传空时,这里会异常
-        return attributeStatus == null ? null : (M) attributeStatus.code();
+        return attribute == null ? null : (M) attribute.code();
     }
 
     /**
      * code值 转为枚举类
      *
-     * @param i
-     * @return
+     * @param dbData 数据库值
+     * @return 实体属性值
      */
     @Override
-    public S convertToEntityAttribute(M i) {
-        if (i == null) {
+    public S convertToEntityAttribute(M dbData) {
+        if (dbData == null) {
             return null;
         }
         //获取 子类中 <S,T> 规定的参数类型
@@ -50,7 +50,7 @@ public abstract class AbstractEnumConverter<S extends CodeEnum, M extends Number
             if (Enum.class.isAssignableFrom(clazz)) {
                 S[] values = clazz.getEnumConstants();
                 for (S ele : values) {
-                    if (i.equals(ele.code())) {
+                    if (dbData.equals(ele.code())) {
                         return ele;
                     }
                 }

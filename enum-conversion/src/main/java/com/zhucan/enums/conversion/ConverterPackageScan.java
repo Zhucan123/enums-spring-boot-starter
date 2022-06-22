@@ -10,5 +10,4 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EntityScan(basePackages = "com.zhucan.conversion.converter")
 public class ConverterPackageScan {
 
-
 }

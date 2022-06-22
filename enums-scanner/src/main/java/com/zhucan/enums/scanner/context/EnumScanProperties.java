@@ -1,8 +1,8 @@
 package com.zhucan.enums.scanner.context;
 
-import com.google.common.collect.Lists;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -16,7 +16,7 @@ public class EnumScanProperties {
     /**
      * 扫描的包路径
      */
-    private List<String> scanPackages = Lists.newArrayList("com");
+    private List<String> scanPackages = Collections.singletonList("com");
 
     public List<String> getScanPackages() {
         return scanPackages;

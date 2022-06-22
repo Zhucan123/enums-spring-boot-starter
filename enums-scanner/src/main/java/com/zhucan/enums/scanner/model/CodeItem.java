@@ -1,7 +1,7 @@
-package com.zhucan.enums.scanner.dto;
+package com.zhucan.enums.scanner.model;
 
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.zhucan.enums.scanner.CodeEnum;
+import com.zhucan.enums.core.enums.CodeEnum;
 
 /**
  * @author: zhuCan

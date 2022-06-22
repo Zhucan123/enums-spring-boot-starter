@@ -1,6 +1,6 @@
 package com.zhucan.enums.scanner.handler;
 
-import com.zhucan.enums.scanner.dto.CodeTable;
+import com.zhucan.enums.scanner.model.CodeTable;
 
 import java.util.List;
 

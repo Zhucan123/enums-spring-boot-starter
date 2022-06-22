@@ -1,6 +1,6 @@
-package com.zhucan.enums.scanner.dto;
+package com.zhucan.enums.scanner.model;
 
-import com.zhucan.enums.scanner.CodeEnum;
+import com.zhucan.enums.core.enums.CodeEnum;
 
 import java.util.List;
 

@@ -1,13 +1,15 @@
 package com.zhucan.enums.conversion;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zhucan.enums.conversion.serializer.JsonEnumConverter;
+import com.zhucan.enums.conversion.config.MvcConfiguration;
+import com.zhucan.enums.conversion.config.JsonEnumConverter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Import;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.persistence.AttributeConverter;
 
@@ -27,5 +29,11 @@ public class EnumsConversionAutoConfiguration {
     @ConditionalOnBean(ObjectMapper.class)
     public JsonEnumConverter jsonEnumConverter() {
         return new JsonEnumConverter();
+    }
+
+    @Bean
+    @ConditionalOnClass(WebMvcConfigurer.class)
+    public MvcConfiguration mvcConfiguration(){
+        return new MvcConfiguration();
     }
 }

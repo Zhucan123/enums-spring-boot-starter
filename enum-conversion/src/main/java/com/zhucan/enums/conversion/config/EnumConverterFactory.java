@@ -1,6 +1,6 @@
-package com.zhucan.enums.conversion.serializer;
+package com.zhucan.enums.conversion.config;
 
-import com.zhucan.enums.conversion.CodeEnum;
+import com.zhucan.enums.core.enums.CodeEnum;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
 

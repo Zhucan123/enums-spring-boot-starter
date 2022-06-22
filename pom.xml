@@ -16,15 +16,12 @@
 	<name>enum-spring-boot-starter</name>
 	<description>top pom manager for enums starter</description>
 
-	<modules>
-		<module>enum-conversion</module>
-		<module>enums-scanner</module>
-	</modules>
 
 	<properties>
 		<java.version>1.8</java.version>
 		<google.autoservice.version>1.0-rc2</google.autoservice.version>
 		<javapoet.version>1.8.0</javapoet.version>
+		<enums-core.version>1.0.8-RELEASE</enums-core.version>
 	</properties>
 
 	<dependencies>

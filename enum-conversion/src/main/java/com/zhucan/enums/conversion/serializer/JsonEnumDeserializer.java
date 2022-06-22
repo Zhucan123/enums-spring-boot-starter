@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.BeanProperty;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.deser.ContextualDeserializer;
-import com.zhucan.enums.conversion.CodeEnum;
+import com.zhucan.enums.core.enums.CodeEnum;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;

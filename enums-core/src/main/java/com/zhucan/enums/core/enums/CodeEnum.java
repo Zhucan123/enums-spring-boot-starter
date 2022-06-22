@@ -1,4 +1,4 @@
-package com.zhucan.enums.conversion;
+package com.zhucan.enums.core.enums;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -12,7 +12,7 @@ public interface CodeEnum {
     /**
      * 枚举的 code 值
      *
-     * @return
+     * @return 枚举标识
      */
     @JsonValue
     Integer code();
@@ -20,17 +20,17 @@ public interface CodeEnum {
     /**
      * 枚举的属性
      *
-     * @return
+     * @return 枚举的值
      */
     String value();
 
     /**
      * 通过code 获取枚举值
      *
-     * @param enumType
-     * @param i
-     * @param <EnumType>
-     * @return
+     * @param enumType   默认的枚举查询转换方法
+     * @param i          枚举标识
+     * @param <EnumType> 枚举类型
+     * @return 枚举
      */
     static <EnumType extends CodeEnum> EnumType valueOf(Class<EnumType> enumType, Integer i) {
         for (EnumType ele : enumType.getEnumConstants()) {
@@ -38,6 +38,7 @@ public interface CodeEnum {
                 return ele;
             }
         }
+        // 检索不到返回null值
         return null;
     }
 
