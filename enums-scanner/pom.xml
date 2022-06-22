@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.gitee.zhucan123</groupId>
-        <artifactId>spring-boot-starter</artifactId>
-        <version>1.0.2-RELEASE</version>
+        <artifactId>enum-spring-boot-starter</artifactId>
+        <version>1.0.8-RELEASE</version>
     </parent>
 
     <artifactId>spring-boot-starter-enums-scanner</artifactId>
-    <version>1.0.5-RELEASE</version>
+    <version>1.0.8-RELEASE</version>
     <name>enums-scanner</name>
 
     <description>Demo project for Spring Boot</description>
@@ -21,11 +21,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.squareup</groupId>
-            <artifactId>javapoet</artifactId>
-            <version>${javapoet.version}</version>
-        </dependency>
     </dependencies>
 
 

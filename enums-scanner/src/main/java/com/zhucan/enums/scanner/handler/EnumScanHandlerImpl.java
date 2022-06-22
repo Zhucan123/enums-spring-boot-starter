@@ -1,6 +1,5 @@
 package com.zhucan.enums.scanner.handler;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zhucan.enums.scanner.CodeEnum;
 import com.zhucan.enums.scanner.annotation.EnumScan;
 import com.zhucan.enums.scanner.cached.EnumCache;
@@ -20,18 +19,23 @@ import java.util.stream.Collectors;
  */
 public class EnumScanHandlerImpl implements EnumScanHandler {
 
-
+    /**
+     * 码表缓存
+     */
     private EnumCache cache;
 
-
+    /**
+     * 资源扫描器
+     */
     private ResourcesScanner<Class<?>> resourcesScanner;
 
-  public EnumScanHandlerImpl(EnumCache cache,  ResourcesScanner<Class<?>> resourcesScanner) {
-    this.cache = cache;
-    this.resourcesScanner = resourcesScanner;
-  }
 
-  /**
+    public EnumScanHandlerImpl(EnumCache cache, ResourcesScanner<Class<?>> resourcesScanner) {
+        this.cache = cache;
+        this.resourcesScanner = resourcesScanner;
+    }
+
+    /**
      * 通过反射来获取所有需要扫描的枚举属性值,并存入缓存中
      */
     private void cacheHandler() {
@@ -69,13 +73,13 @@ public class EnumScanHandlerImpl implements EnumScanHandler {
     /**
      * 获取系统中的所有枚举
      *
-     * @return
+     * @return 码表集合
      */
     @Override
     public List<CodeTable> codeTables() {
         List<CodeTable> read = cache.read();
         if (read == null) {
-
+            // 获取不到数据进行加载
             cacheHandler();
             return cache.read();
         }

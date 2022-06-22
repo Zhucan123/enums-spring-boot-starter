@@ -2,11 +2,9 @@ package com.zhucan.enums.scanner.context;
 
 import org.springframework.core.type.filter.TypeFilter;
 
-import java.util.List;
-
 /**
  * @author zhuCan
- * @description 过滤器
+ * @description 文件扫描过滤器
  * @since 2021-09-09 14:26
  **/
 public interface TypeFilterProvider {
@@ -16,5 +14,5 @@ public interface TypeFilterProvider {
      *
      * @return filter
      */
-    List<TypeFilter> filter();
+    TypeFilter filter();
 }

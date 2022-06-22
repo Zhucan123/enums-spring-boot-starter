@@ -7,12 +7,15 @@ import java.util.List;
 
 /**
  * @author zhuCan
- * @description
+ * @description 码表扫描配置属性类
  * @since 2021-09-09 14:18
  **/
 @ConfigurationProperties(prefix = "enum-scan")
 public class EnumScanProperties {
 
+    /**
+     * 扫描的包路径
+     */
     private List<String> scanPackages = Lists.newArrayList("com");
 
     public List<String> getScanPackages() {

@@ -10,54 +10,53 @@ import com.zhucan.enums.scanner.CodeEnum;
  */
 public class CodeItem implements CodeEnum {
 
-  /**
-   * code
-   */
-  private Integer code;
+    /**
+     * code
+     */
+    private Integer code;
 
-  /**
-   * name 标识
-   */
-  private String name;
+    /**
+     * name 标识
+     */
+    private String name;
 
-  public CodeItem(CodeEnum codeEnum) {
-    this.code = codeEnum.code();
-    this.name = codeEnum.value();
-  }
+    public CodeItem(CodeEnum codeEnum) {
+        this.code = codeEnum.code();
+        this.name = codeEnum.value();
+    }
 
-  public CodeItem(){
+    public CodeItem() {
+    }
 
-  }
+    /**
+     * 重写覆盖 jsonValue注解,
+     *
+     * @return 枚举标识值
+     */
+    @Override
+    @JsonValue(value = false)
+    public Integer code() {
+        return code;
+    }
 
-  /**
-   * 重写覆盖 jsonValue注解,
-   *
-   * @return
-   */
-  @Override
-  @JsonValue(value = false)
-  public Integer code() {
-    return code;
-  }
+    @Override
+    public String value() {
+        return name;
+    }
 
-  @Override
-  public String value() {
-    return name;
-  }
+    public Integer getCode() {
+        return code;
+    }
 
-  public Integer getCode() {
-    return code;
-  }
+    public void setCode(Integer code) {
+        this.code = code;
+    }
 
-  public void setCode(Integer code) {
-    this.code = code;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 }
