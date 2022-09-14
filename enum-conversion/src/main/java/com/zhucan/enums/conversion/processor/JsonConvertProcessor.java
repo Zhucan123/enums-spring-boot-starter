@@ -25,7 +25,7 @@ import java.util.Set;
  */
 @AutoService(Processor.class)
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
-@SupportedAnnotationTypes("com.zhucan.jpa.conversion.annotation.JsonAutoConverter")
+@SupportedAnnotationTypes("com.zhucan.enums.conversion.annotation.JsonAutoConverter")
 public class JsonConvertProcessor extends AbstractProcessor {
 
     private Filer filer;
