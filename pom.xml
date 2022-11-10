@@ -11,11 +11,17 @@
 
 	<groupId>io.gitee.zhucan123</groupId>
 	<artifactId>enum-spring-boot-starter</artifactId>
-	<version>1.1.0-RELEASE</version>
+	<version>1.1.4-RELEASE</version>
 	<packaging>pom</packaging>
 
 	<name>enum-spring-boot-starter</name>
 	<description>top pom manager for enums starter</description>
+
+	<modules>
+		<module>enums-core</module>
+		<module>enum-conversion</module>
+		<module>enums-scanner</module>
+	</modules>
 
 
 	<properties>

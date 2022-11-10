@@ -1,8 +1,8 @@
-package com.zhucan.enums.conversion.config;
+package com.zhucan.enums.core.mvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.zhucan.enums.conversion.serializer.JsonEnumDeserializer;
+import com.zhucan.enums.core.serializer.JsonEnumDeserializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.ApplicationListener;

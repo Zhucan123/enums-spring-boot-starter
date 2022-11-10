@@ -1,4 +1,4 @@
-package com.zhucan.enums.conversion.config;
+package com.zhucan.enums.core.mvc;
 
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

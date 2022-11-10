@@ -1,4 +1,4 @@
-package com.zhucan.enums.conversion.serializer;
+package com.zhucan.enums.core.serializer;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.BeanProperty;

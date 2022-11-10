@@ -1,4 +1,4 @@
-package com.zhucan.enums.conversion.config;
+package com.zhucan.enums.core.mvc;
 
 import com.zhucan.enums.core.enums.CodeEnum;
 import org.springframework.core.convert.converter.Converter;
