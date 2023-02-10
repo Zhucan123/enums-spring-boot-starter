@@ -5,11 +5,11 @@
     <parent>
         <groupId>io.gitee.zhucan123</groupId>
         <artifactId>enum-spring-boot-starter</artifactId>
-        <version>1.1.4-RELEASE</version>
+        <version>1.1.5-RELEASE</version>
     </parent>
 
     <artifactId>enums-core</artifactId>
-    <version>1.1.4-RELEASE</version>
+    <version>1.1.5-RELEASE</version>
 
     <name>enums-core</name>
     <description>core code from enum spring boot starter</description>

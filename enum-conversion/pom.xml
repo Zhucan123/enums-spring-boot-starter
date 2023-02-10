@@ -5,20 +5,31 @@
     <parent>
         <groupId>io.gitee.zhucan123</groupId>
         <artifactId>enum-spring-boot-starter</artifactId>
-        <version>1.1.4-RELEASE</version>
+        <version>1.1.5-RELEASE</version>
     </parent>
 
     <artifactId>spring-boot-starter-enums-conversion</artifactId>
-    <version>1.1.4-RELEASE</version>
+    <version>1.1.5-RELEASE</version>
     <name>enums-conversion</name>
 
     <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+    </properties>
 
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-core</artifactId>
+            <version>${mybatis-plus.version}</version>
             <optional>true</optional>
         </dependency>
 

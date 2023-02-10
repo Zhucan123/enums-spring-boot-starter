@@ -16,11 +16,13 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
  */
 public class JsonEnumConverter implements ApplicationListener<ContextRefreshedEvent> {
 
-    @Autowired
     private MappingJackson2HttpMessageConverter httpMessageConverter;
-    @Autowired
     private ObjectMapper objectMapper;
 
+    public JsonEnumConverter(MappingJackson2HttpMessageConverter httpMessageConverter, ObjectMapper objectMapper) {
+        this.httpMessageConverter = httpMessageConverter;
+        this.objectMapper = objectMapper;
+    }
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
@@ -34,8 +36,4 @@ public class JsonEnumConverter implements ApplicationListener<ContextRefreshedEv
         httpMessageConverter.setObjectMapper(objectMapper);
     }
 
-    @ConditionalOnMissingBean(MappingJackson2HttpMessageConverter.class)
-    public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
-        return new MappingJackson2HttpMessageConverter();
-    }
 }
