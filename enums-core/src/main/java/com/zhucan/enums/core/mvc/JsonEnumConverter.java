@@ -26,12 +26,17 @@ public class JsonEnumConverter implements ApplicationListener<ContextRefreshedEv
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        SimpleModule simpleModule = new SimpleModule();
+        simpleModule.addDeserializer(Enum.class, new JsonEnumDeserializer());
+
+        if (objectMapper != null){
+            objectMapper.registerModule(simpleModule);
+        }
+
         if (httpMessageConverter != null) {
             objectMapper = httpMessageConverter.getObjectMapper();
         }
 
-        SimpleModule simpleModule = new SimpleModule();
-        simpleModule.addDeserializer(Enum.class, new JsonEnumDeserializer());
         objectMapper.registerModule(simpleModule);
         httpMessageConverter.setObjectMapper(objectMapper);
     }
