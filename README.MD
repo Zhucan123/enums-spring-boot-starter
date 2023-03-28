@@ -2,6 +2,8 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![Gitee Stars](https://gitee.com/zc_oss/enums-spring-boot-starter/badge/star.svg?theme=dark)](https://gitee.com/zc_oss/enums-spring-boot-starter)
+[![Gitee fork](https://gitee.com/zc_oss/enums-spring-boot-starter/badge/fork.svg?theme=dark)](https://gitee.com/zc_oss/enums-spring-boot-starter)
+
 
 enums-spring-boot-starter 是一个针对 Java 枚举类型的开源项目，它可以帮助你在数据库操作和接口传参过程中自动转换枚举类型。通过使用这个库，你可以更方便地在不同的场景中使用 Java 枚举类型。
 
