@@ -22,7 +22,7 @@ enums-spring-boot-starter 是一个针对 Java 枚举类型的开源项目，它
 <dependency>
     <groupId>com.example</groupId>
     <artifactId>enums-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.8-RELEASE</version>
 </dependency>
 ```
 
@@ -31,7 +31,7 @@ enums-spring-boot-starter 是一个针对 Java 枚举类型的开源项目，它
 在你的 build.gradle 文件中添加以下依赖：
 
 ```groovy
-implementation 'com.example:enums-spring-boot-starter:1.0.0'
+implementation 'com.example:enums-spring-boot-starter:1.1.8-RELEASE'
 ```
 
 ## 使用方法
