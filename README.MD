@@ -58,11 +58,7 @@ public enum OrderBillStateEnum implements ExtensionEnum {
 
     private final int code;
     private final String name;
-
-    // 待提交状态映射
-    public static List<OrderBillStateEnum> commitState() {
-        return Lists.newArrayList(UNCONFIRMED, CONFIRMED);
-    }
+    
 }
 ```
 
@@ -89,7 +85,7 @@ public class PluginOrderBillQuery {
 @Entity
 @Data
 @Where(clause = "is_deleted = 0")
-public class PluginOrderBill extends FullAuditedAggregateRoot implements TeamData, Serializable {
+public class PluginOrderBill  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
